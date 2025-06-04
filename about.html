@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About Me | Sardorbek</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+<style>
+  /* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    color: #333;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    padding: 40px 50px;
+    max-width: 900px;
+    width: 100%;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .avatar {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: transform 0.4s ease;
+  }
+
+  .avatar:hover {
+    transform: scale(1.05);
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Ikonkalar va tugmalar avatar tagida markazlashtirilgan */
+  .avatar-footer {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .avatar:hover .avatar-footer {
+    opacity: 1;
+  }
+
+  .avatar-footer a {
+    color: white;
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+  }
+
+  .avatar-footer a:hover {
+    color: #ff4d4d;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .info h1 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    color: #222;
+    margin-bottom: 15px;
+  }
+
+  .info p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
+  }
+
+  .contact-icons {
+    display: flex;
+    gap: 25px;
+  }
+
+  .contact-icons a {
+    color: #666;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+  }
+
+  .contact-icons a:hover {
+    color: #ff4d4d;
+  }
+
+  /* Responsive */
+
+  @media (max-width: 720px) {
+    .about-wrapper {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 30px 20px;
+    }
+
+    .avatar {
+      width: 220px;
+      height: 220px;
+      justify-self: center;
+    }
+
+    .info h1 {
+      font-size: 2.2rem;
+      text-align: center;
+    }
+
+    .info p {
+      text-align: center;
+    }
+
+    .contact-icons {
+      justify-content: center;
+    }
+
+    .avatar-footer {
+      bottom: 10px;
+      padding: 6px 15px;
+      gap: 15px;
+    }
+
+    .avatar-footer a {
+      font-size: 1.3rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <section class="about-wrapper">
+    <div class="avatar">
+      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80" alt="Sardorbek Sobirjonov" />
+      <!-- Iconlar avatar ostida, hover qilganda ko'rinadi -->
+      <div class="avatar-footer">
+        <a href="mailto:sardorbek@example.com" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://t.me/sardorbek" target="_blank" aria-label="Telegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://github.com/sardorbek" target="_blank" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/sardorbek" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="info">
+      <h1>Sardorbek Sobirjonov</h1>
+      <p>
+        Men <strong>full-stack developer</strong>man — front-end va back-end sohalarida chuqur bilim va tajribaga egaman.
+        HTML, CSS, JavaScript, Python, va PostgreSQL kabi texnologiyalar bilan ishlayman.
+        Zamonaviy veb va mobil ilovalarni yaratish, samarali va tezkor kod yozishga e’tibor qarataman.
+        Texnologiyalarni tez o‘rganaman, muammolarni hal qilishni yoqtiraman va jamoa bilan samarali hamkorlik qilishga intilaman.
+      </p>
+      <div class="contact-icons">
+        <a href="mailto:sardorbek@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://t.me/sardorbek" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://github.com/sardorbek" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="serverk.html" target="_blank" aria-label="LinkedIn"><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

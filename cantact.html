@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt - Animatsiyali</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fef6e4;
+      font-family: 'Montserrat', sans-serif;
+      color: #4b3b2b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .container {
+      display: flex;
+      max-width: 900px;
+      width: 100%;
+      background: #fff7e6;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(75, 59, 43, 0.15);
+      overflow: hidden;
+      animation: fadeInScale 0.8s ease forwards;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      box-shadow: 0 8px 30px rgba(75, 59, 43, 0.3);
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 30px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      border-left: 5px solid #c78c30;
+      padding-left: 15px;
+      color: #a36e21;
+      letter-spacing: 1px;
+    }
+
+    .info-item {
+      margin-bottom: 18px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: default;
+      transition: color 0.25s ease;
+    }
+
+    .info-item svg {
+      width: 24px;
+      height: 24px;
+      fill: #c78c30;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .info-item:hover {
+      color: #d9a441;
+    }
+    .info-item:hover svg {
+      transform: scale(1.1) rotate(10deg);
+      fill: #d9a441;
+    }
+
+    .social-links {
+      margin-top: 25px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .social-links a {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #c78c30;
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 3px 7px rgba(199, 140, 48, 0.5);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #d9a441;
+      transform: scale(1.15);
+      box-shadow: 0 5px 15px rgba(217, 164, 65, 0.7);
+    }
+
+    .right iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0 15px 15px 0;
+      box-shadow: 0 3px 10px rgba(75, 59, 43, 0.1);
+      min-height: 350px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .right iframe:hover {
+      box-shadow: 0 5px 20px rgba(163, 110, 33, 0.35);
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        border-radius: 15px;
+      }
+
+      .right iframe {
+        border-radius: 0 0 15px 15px;
+        min-height: 250px;
+      }
+
+      .left, .right {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <h2>Biz bilan bog'laning</h2>
+
+      <div class="info-item">
+        <svg viewBox="0 0 24 24"><path d="M3 5h12M9 3v2m6 4v6m0 0h2m-2 0v2M7 7h.01M7 11h.01M7 15h.01M7 19h.01"/></svg>
+        <a href="tel:+998901234567" style="color:inherit; text-decoration:none;">+998 94 089 81 19</a>
+      </div>
+
+      <div class="info-item">
+        <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13 21.314l-4.657-4.657a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <p style="margin:0;">Andijon Asaka</p>
+      </div>
+
+      <h3 style="margin-top:30px; margin-bottom:15px; color:#a36e21;">Ijtimoiy tarmoqlar</h3>
+      <div class="social-links">
+        <a href="https://instagram.com/" target="_blank" aria-label="Instagram" title="Instagram" style="color:#fff;">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5a4.25 4.25 0 00-4.25 4.25v8.5a4.25 4.25 0 004.25 4.25h8.5a4.25 4.25 0 004.25-4.25v-8.5a4.25 4.25 0 00-4.25-4.25h-8.5zm4.25 3a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5zm4.75-.75a1 1 0 110 2 1 1 0 010-2z"/></svg>
+        </a>
+        <a href="https://t.me/sardorbeksobirjonov" target="_blank" aria-label="Telegram" title="Telegram" style="color:#fff;">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M9.18 15.47l-.37 4.86c.53 0 .76-.22 1.03-.49l2.46-2.39 5.11 3.75c.93.52 1.6.25 1.85-.86L21.83 6.1c.27-1.2-.43-1.73-1.1-1.43L3.64 10.4c-1.17.47-1.16 1.14-.2 1.46l4.65 1.45 10.81-6.8"/></svg>
+        </a>
+        <a href="https://facebook.com/" target="_blank" aria-label="Facebook" title="Facebook" style="color:#fff;">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M22 12a10 10 0 10-11.66 9.83v-6.95H8v-2.88h2.34V9.4c0-2.31 1.39-3.58 3.52-3.58 1.02 0 2.08.18 2.08.18v2.3h-1.18c-1.17 0-1.54.73-1.54 1.48v1.76h2.62l-.42 2.88h-2.2v6.95A10 10 0 0022 12z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="right">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.155417648553!2d69.20434631524386!3d41.31115187927084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b7cc2fdd487%3A0x7f5a8b1c5a3ee6f8!2sToshkent%20Shahar%2C%20Chilonzor%20Tumani!5e0!3m2!1suz!2s!4v1683602457195!5m2!1suz!2s"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Toshkent xaritasi"
+      ></iframe>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mening Ishlarim | Sardor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1d2b64, #f8cdda);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 50px 20px;
+      text-align: center;
+      animation: fadeDown 1.2s ease;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .work-item {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .work-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .work-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .work-content {
+      padding: 20px;
+    }
+
+    .work-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .work-content p {
+      font-size: 0.95rem;
+      color: #dddddd;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mening Ishlarim</h1>
+  </header>
+  <section class="works">
+    <div class="work-item">
+      <img src="https://source.unsplash.com/800x600/?webdesign" alt="Web Design" />
+      <div class="work-content">
+        <h3>Portfolio Vebsayti</h3>
+        <p>Shaxsiy portfolio sahifasi HTML, CSS va JavaScript yordamida yaratilgan, responsiv va mobilga mos.</p>
+      </div>
+    </div>
+    <div class="work-item">
+      <img src="https://source.unsplash.com/800x600/?app" alt="Mobil Ilova" />
+      <div class="work-content">
+        <h3>Telegram Bot</h3>
+        <p>Python yordamida foydali Telegram bot yaratildi, foydalanuvchilarga xizmat ko'rsatadi.</p>
+      </div>
+    </div>
+    <div class="work-item">
+      <img src="https://source.unsplash.com/800x600/?database" alt="Backend" />
+      <div class="work-content">
+        <h3>Ma'lumotlar Bazasiga Ulash</h3>
+        <p>PostgreSQL bilan backend tizim ishlab chiqilgan, foydalanuvchi ma'lumotlari xavfsiz saqlanadi.</p>
+      </div>
+    </div>
+    <!-- <div class="work-item">
+      <img src="https://source.unsplash.com/800x600/?teamwork" alt="Team" />
+      <div class="work-content">
+        <h3>Jamoaviy Loyiha</h3>
+        <p>Bir nechta dasturchilar bilan birgalikda zamonaviy tizim yaratildi. Full-Stack ishlov berilgan.</p>
+      </div>
+    </div> -->
+  </section>
+</body>
+</html>
